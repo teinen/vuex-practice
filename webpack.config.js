@@ -51,6 +51,9 @@ module.exports = [
     performance: {
       hints: false
     },
+    resolve: {
+      '@': path.resolve(__dirname, 'src/'),
+    },
     devServer: {
       host: '0.0.0.0',
       port: 8080
