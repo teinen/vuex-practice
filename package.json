@@ -1,4 +1,16 @@
 {
+  "name": "vuex-practice",
+  "version": "1.0.0",
+  "description": "Vuex practice app",
+  "main": "index.js",
+  "repository": "https://teinen@github.com/teinen/vuex-practice.git",
+  "author": "諦念 <teinen.github@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --hot --inline"
+  },
   "dependencies": {
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
