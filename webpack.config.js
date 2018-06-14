@@ -45,13 +45,11 @@ module.exports = [
         }
       ]
     },
-    resolve: {
-      extensions: ['.js', '.vue']
-    },
     performance: {
       hints: false
     },
     resolve: {
+      extensions: ['.js', '.vue'],
       alias: {
         '@': path.resolve(__dirname, 'src/'),
       }
