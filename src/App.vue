@@ -1,20 +1,23 @@
 <template>
   <div>
-    <h1>Hello App</h1>
-    <p>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-    </p>
+    <!-- Header nav -->
+    <header-comp></header-comp>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  export default {
+import Header from '@/components/Header'
 
+export default {
+  components: {
+    'header-comp': Header
   }
+}
 </script>
 
 <style lang="scss">
-
+body {
+  padding: 10px;
+}
 </style>

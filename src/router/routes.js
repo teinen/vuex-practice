@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import HomePage from '@/pages/HomePage'
-import AboutPage from '@/pages/AboutPage'
+import CartPage from '@/pages/CartPage'
 
 Vue.use(VueRouter)
 
@@ -15,9 +15,9 @@ const router = new VueRouter({
       component: HomePage
     },
     {
-      name: 'about',
-      path: '/about',
-      component: AboutPage
+      name: 'cart',
+      path: '/cart',
+      component: CartPage
     },
   ]
 })
