@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = [
@@ -61,6 +62,9 @@ module.exports = [
       historyApiFallback: true
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        template: "./index.html"
+      }),
       new VueLoaderPlugin()
     ],
   },
