@@ -7,7 +7,6 @@ import CartPage from '@/pages/CartPage'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
   routes: [
     {
       name: 'home',
