@@ -1,22 +1,17 @@
 <template>
   <div>
     <h1>Products List</h1>
-    <ul>
-      <li v-for="product in products" :key=product.id>
-        <router-link
-          :to="{name: 'product', params: {id: product.id}}"
-          class="name"
-        >
-          {{ product.name }}
-        </router-link>
-        <span class="price">{{ product.price }}</span>
-        <span class="stock">{{ product.stock }}</span>
-      </li>
-    </ul>
+    <div class="container">
+      <div v-for="product in products" :key=product.id>
+        <product :product="product"></product>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Product from '@/components/Product'
+
 export default {
   data () {
     return {
@@ -24,45 +19,33 @@ export default {
         {
           id: 1,
           name: 'Google Home Mini',
-          price: 49,
+          price: 49.01,
           stock: 3
         },
         {
           id: 2,
           name: 'Amazon Echo Dot',
-          price: 50,
+          price: 50.99,
           stock: 5
+        },
+        {
+          id: 3,
+          name: 'Fire TV Stick',
+          price: 45.99,
+          stock: 8
         }
       ]
     }
+  },
+  components: {
+    'product': Product,
   }
 }
 </script>
 
-<style lang="scss">
-li {
-  list-style-type: none;
-  margin: 10px 0px;
-}
-
-.name {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.price {
-  font-size: 1.2rem;
-
-  &::before {
-    content: '$';
-  }
-}
-
-.stock {
-  font-size: 1.2rem;
-
-  &::before {
-    content: 'Stock: ';
-  }
+<style lang="scss" scoped>
+.container {
+  display: flex;
+  flex-flow: row nowrap;
 }
 </style>
