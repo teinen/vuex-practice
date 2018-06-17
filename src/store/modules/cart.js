@@ -29,9 +29,9 @@ const mutations = {
 
 const getters = {
   cartProducts (state, getters, rootState) {
-    state.addedProducts.map(({ id, quantity }) => {
+    return state.addedProducts.map(({ id, quantity }) => {
       // find the product from root state (products.js)
-      const product = rootState.products.all.find(p => p.id === id)
+      const product = rootState.products.products.find(p => p.id === id)
 
       return {
         id,
