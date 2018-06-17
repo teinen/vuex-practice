@@ -26,10 +26,17 @@ body {
 }
 
 .app {
-  padding: 10px;
+
+}
+
+.header {
+  border-bottom: solid 1px #d8d8d8;
+  width: 100%;
+  padding: 15px;
 }
 
 .main {
-
+  width: 100%;
+  padding: 0px 20px;
 }
 </style>
