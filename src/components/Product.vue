@@ -20,7 +20,7 @@ export default {
   flex-flow: column nowrap;
   width: 200px;
   height: 200px;
-  margin: 5px;
+  margin-right: 10px;
   border: solid 1px #d8d8d8;
 
   .name {
@@ -33,7 +33,7 @@ export default {
 
   .price {
     font-size: 1.2rem;
-    padding: 5px 10px 0px 10px;
+    margin: 10px 10px 0px 10px;
 
     &::before {
       content: '$ ';
@@ -42,10 +42,10 @@ export default {
 
   .stock {
     font-size: 1.2rem;
-    padding: 5px 10px 0px 10px;
+    margin: 10px 0px 0px 10px;
 
     &::before {
-      content: 'Stock: ';
+      content: 'stock: ';
     }
   }
 }
