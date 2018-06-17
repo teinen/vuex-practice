@@ -3,7 +3,9 @@
     <div class="header">
       <header-bar></header-bar>
     </div>
-    <router-view></router-view>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -11,10 +13,10 @@
 import Header from '@/components/Header'
 
 export default {
+  name: 'app',
   components: {
     'header-bar': Header
   },
-  name: 'app'
 }
 </script>
 
@@ -25,6 +27,9 @@ body {
 
 .app {
   padding: 10px;
+}
+
+.main {
 
 }
 </style>

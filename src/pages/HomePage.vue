@@ -1,11 +1,16 @@
 <template>
   <div>
-    <h1>Product List</h1>
+    <h1>Products List</h1>
     <ul>
-      <li v-for="item in items" :key=item.id>
-        <span class="name">{{ item.name }}</span>
-        <span class="price">{{ item.price }}</span>
-        <span class="stock">{{ item.stock }}</span>
+      <li v-for="product in products" :key=product.id>
+        <router-link
+          :to="{name: 'product', params: {id: product.id}}"
+          class="name"
+        >
+          {{ product.name }}
+        </router-link>
+        <span class="price">{{ product.price }}</span>
+        <span class="stock">{{ product.stock }}</span>
       </li>
     </ul>
   </div>
@@ -15,7 +20,7 @@
 export default {
   data () {
     return {
-      items: [
+      products: [
         {
           id: 1,
           name: 'Google Home Mini',
