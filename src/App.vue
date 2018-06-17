@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <!-- Header nav -->
-    <header-comp></header-comp>
+  <div class="app">
+    <div class="header">
+      <header-bar></header-bar>
+    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -11,13 +12,19 @@ import Header from '@/components/Header'
 
 export default {
   components: {
-    'header-comp': Header
-  }
+    'header-bar': Header
+  },
+  name: 'app'
 }
 </script>
 
 <style lang="scss">
 body {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.app {
   padding: 10px;
+
 }
 </style>
