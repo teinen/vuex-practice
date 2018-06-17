@@ -6,15 +6,10 @@
     <span class="price">{{ product.price }}</span>
     <span class="stock">{{ product.stock }}</span>
     <button
-      v-if="product.stock === 0"
-      class="add"
-      disabled
-    >Out of stock</button>
-    <button
-      v-else
       @click="addToCart(product)"
       class="add"
-    >Add To Cart</button>
+      :disabled="!product.stock"
+    >{{ product.stock > 0 ? 'Add To Cart' : 'Out of Stock' }}</button>
   </div>
 </template>
 
