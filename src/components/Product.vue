@@ -5,12 +5,31 @@
     </router-link>
     <span class="price">{{ product.price }}</span>
     <span class="stock">{{ product.stock }}</span>
+    <button
+      v-if="product.stock === 0"
+      class="add"
+      disabled
+    >Out of stock</button>
+    <button
+      v-else
+      @click="addToCart(product)"
+      class="add"
+    >Add To Cart</button>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
-  props: ['product']
+  props: [
+    'product'
+  ],
+  methods: {
+    ...mapActions([
+      'addToCart'
+    ])
+  }
 }
 </script>
 
@@ -47,6 +66,12 @@ export default {
     &::before {
       content: 'stock: ';
     }
+  }
+
+  .add {
+    width: 120px;
+    height: 30px;
+    margin: auto;
   }
 }
 </style>

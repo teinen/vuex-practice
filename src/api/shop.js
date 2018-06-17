@@ -8,7 +8,10 @@ const _products = [
 ]
 
 export default {
-  getProducts (cb) {
-    setTimeout(() => cb(_products), 100)
+  getProducts (callback) {
+    setTimeout(() => callback(_products), 100)
+  },
+  buyProducts (callback) {
+    setTimeout(() => callback(_products), 100)
   }
 }
