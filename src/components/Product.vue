@@ -7,7 +7,7 @@
     <span class="stock">{{ product.stock }}</span>
     <button
       @click="addToCart(product)"
-      class="add"
+      class="add-button"
       :disabled="!product.stock"
     >{{ product.stock > 0 ? 'Add To Cart' : 'Out of Stock' }}</button>
   </div>
@@ -63,7 +63,7 @@ export default {
     }
   }
 
-  .add {
+  .add-button {
     width: 120px;
     height: 30px;
     margin: auto;
