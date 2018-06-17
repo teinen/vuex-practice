@@ -1,31 +1,32 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import shop from '@/api/shop'
 
-Vue.use(Vuex)
+const state = {
+  products: []
+}
 
-const store = new Vuex.Store({
-  state: {
-    products: [
-      {
-        id: 1,
-        name: 'Google Home Mini',
-        price: 49.01,
-        stock: 3
-      },
-      {
-        id: 2,
-        name: 'Amazon Echo Dot',
-        price: 50.99,
-        stock: 5
-      },
-      {
-        id: 3,
-        name: 'Fire TV Stick',
-        price: 45.99,
-        stock: 8
-      }
-    ]
+const actions = {
+  getAllProducts ({ commit }) {
+    shop.getProducts(products => {
+      commit('recieve_products', products)
+    })
   }
-})
+}
 
-export default store
+const mutations = {
+  recieve_products (state, products) {
+    state.products = products
+  }
+}
+
+const getters = {
+  allProducts (state) {
+    return state.products
+  }
+}
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations,
+}
