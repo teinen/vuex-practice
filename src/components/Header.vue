@@ -18,8 +18,5 @@ export default {
 </script>
 
 <style lang="scss">
-.pure-menu {
-  padding-bottom: 10px;
-  border-bottom: solid 1px #d8d8d8;
-}
+
 </style>
